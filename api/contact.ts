@@ -53,7 +53,10 @@ export default async function handler(request: Request) {
     }),
   });
 
-  return response.ok
-    ? Response.json({ ok: true })
-    : Response.json({ error: 'L’envoi a échoué, merci de réessayer dans quelques minutes' }, { status: 502 });
+  if (!response.ok) {
+    console.error('Resend a refusé l’envoi', response.status, await response.text());
+    return Response.json({ error: 'L’envoi a échoué, merci de réessayer dans quelques minutes' }, { status: 502 });
+  }
+
+  return Response.json({ ok: true });
 }

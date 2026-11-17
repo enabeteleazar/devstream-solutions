@@ -12,22 +12,22 @@ export function Footer() {
           </p>
         </div>
         <nav aria-label="Pied de page">
-          <ul className="grid gap-2 text-[15px] text-muted">
+          <ul className="grid gap-1 text-[15px] text-muted">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a className="hover:text-ink" href={item.href}>
+                <a className="inline-block py-1 hover:text-ink" href={item.href}>
                   {item.label}
                 </a>
               </li>
             ))}
           </ul>
         </nav>
-        <div className="grid content-start gap-2 text-[15px] text-muted">
-          <a className="hover:text-ink" href={`mailto:${company.email}`}>
+        <div className="grid content-start justify-items-start gap-1 text-[15px] text-muted">
+          <a className="inline-block py-1 hover:text-ink" href={`mailto:${company.email}`}>
             {company.email}
           </a>
-          <p>{company.area}</p>
-          <a className="hover:text-ink" href="/mentions-legales">
+          <p className="py-1">{company.area}</p>
+          <a className="inline-block py-1 hover:text-ink" href="/mentions-legales">
             Mentions légales
           </a>
         </div>

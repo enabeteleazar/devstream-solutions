@@ -65,7 +65,6 @@ export const projects: Project[] = [
     summary:
       'Site public et espace d’administration pour une coach : prise de rendez-vous en ligne, créneaux synchronisés avec Google Agenda et e-mails de confirmation.',
     highlights: ['Réservation en ligne', 'Google Agenda', 'Base PostgreSQL'],
-    url: 'https://github.com/enabeteleazar/orane_coatch_therapeutique',
   },
   {
     name: 'Pâtisserie Orane',

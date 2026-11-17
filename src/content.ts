@@ -73,7 +73,6 @@ export const projects: Project[] = [
     kind: 'Site web',
     summary: 'Site vitrine d’une pâtisserie artisanale, pensé pour mettre en valeur les créations de la marque.',
     highlights: ['Site vitrine', 'React', 'Mise en ligne Vercel'],
-    url: 'https://patisserie-orane.vercel.app',
   },
   {
     name: 'neronHUB',
@@ -82,7 +81,6 @@ export const projects: Project[] = [
     summary:
       'Tableau de bord de supervision avec serveur d’API, base de données et assistant IA intégré, déployable sur n’importe quel serveur.',
     highlights: ['Full stack', 'IA intégrée', 'Docker'],
-    url: 'https://github.com/enabeteleazar/neronHUB',
   },
   {
     name: 'Lowly.eu',
@@ -91,7 +89,6 @@ export const projects: Project[] = [
     summary:
       'Modernisation d’un ancien site PHP vers un site statique rapide, sans base de données à maintenir, avec redirections des anciennes adresses.',
     highlights: ['Refonte', 'Sans base de données', 'Anciennes URL conservées'],
-    url: 'https://lowly-eu.vercel.app',
   },
 ];
 

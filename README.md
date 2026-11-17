@@ -2,7 +2,7 @@
 
 Site vitrine de DevStream Solutions, studio de développement de sites web, plateformes SaaS et applications web.
 
-En ligne : https://portfolio-nabet-eleazar.vercel.app
+En ligne : https://devstream-solutions.vercel.app (domaine `devstream-solutions.fr` prévu)
 
 ## Stack
 

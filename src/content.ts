@@ -3,8 +3,8 @@
 export const company = {
   name: 'DevStream Solutions',
   tagline: 'Studio de développement web',
-  email: 'nabet.eleazar@gmail.com',
-  url: 'https://portfolio-nabet-eleazar.vercel.app',
+  email: 'eleazar.nabet@outlook.com',
+  url: 'https://devstream-solutions.vercel.app',
   founder: 'Eléazar Nabet',
   area: 'France · à distance',
 };

@@ -1,22 +1,23 @@
-import { Footer } from './components/layout/Footer';
-import { Navbar } from './components/layout/Navbar';
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
 import { Home } from './pages/Home';
-import { Blog } from './pages/Blog';
+import { Legal } from './pages/Legal';
 
 export function App() {
-  const isBlog = window.location.pathname.startsWith('/blog');
+  const path = window.location.pathname.replace(/\/+$/, '');
+  const isLegal = path === '/mentions-legales';
 
   return (
-    <div className="min-h-screen bg-slate-950 text-zinc-100">
+    <>
       <a
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-cyan-300 focus:px-4 focus:py-2 focus:font-bold focus:text-slate-950"
-        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-plum focus:px-4 focus:py-2 focus:font-semibold focus:text-paper"
+        href="#contenu"
       >
-        Aller au contenu principal
+        Aller au contenu
       </a>
-      <Navbar />
-      {isBlog ? <Blog /> : <Home />}
+      <Header />
+      {isLegal ? <Legal /> : <Home />}
       <Footer />
-    </div>
+    </>
   );
 }

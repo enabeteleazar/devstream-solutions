@@ -1,20 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class',
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['Geist', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        serif: ['"Instrument Serif"', 'Georgia', 'Times New Roman', 'serif'],
       },
       colors: {
-        ink: '#080b0a',
-        panel: '#101513',
-        line: '#23302b',
+        paper: '#fbfaf8',
+        ink: '#1d1a24',
+        muted: '#6a6474',
+        line: '#e7e2ea',
+        plum: { DEFAULT: '#6b1f55', soft: '#f3e9f0' },
       },
-      boxShadow: {
-        soft: '0 24px 80px rgba(0, 0, 0, 0.28)',
-      },
+      maxWidth: { site: '76rem' },
     },
   },
   plugins: [],

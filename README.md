@@ -1,68 +1,38 @@
-# Portfolio Eléazar Nabet
+# DevStream Solutions
 
-Portfolio professionnel développé avec React, TypeScript, Vite et Tailwind CSS.
+Site vitrine de DevStream Solutions, studio de développement de sites web, plateformes SaaS et applications web.
 
-Le site présente Eléazar Nabet comme développeur Full Stack, créateur de NéronOS et profil orienté applications web modernes, agents IA, automatisation, Linux, auto-hébergement et architecture logicielle.
+En ligne : https://devstream-solutions.vercel.app (domaine `devstream-solutions.fr` prévu)
 
 ## Stack
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Lucide React
-- Framer Motion
-- Zod
-- Vitest
-- MDX
+React 18, TypeScript, Vite, Tailwind CSS, Lucide (icônes), Vitest. Hébergement Vercel avec une fonction serveur pour le formulaire de contact.
 
-## Contenu mis en avant
+## Modifier le contenu
 
-- NéronOS : assistant personnel intelligent local-first, agents, runtime, Goal Engine, LLM et interfaces.
-- Projets IA : `neronOS`, `neron_llm`, `neron_vocal`, `neron_doctor`, `neronHUB`.
-- Applications web : Orane Coaching, Patiss-Orane, Lowly.eu et projets historiques.
-- Compétences vérifiées via les dépôts publics GitHub : React, TypeScript, Next.js, Vite, Tailwind, Python, FastAPI, Node.js, Express, SQLite, PostgreSQL, Ollama, Linux, systemd, Docker, Tailscale et Vercel.
+Tous les textes (services, projets, méthode, FAQ, e-mail de contact) sont dans `src/content.ts`.
+Les mentions légales sont dans `src/pages/Legal.tsx` : complétez les champs `[à compléter]`.
 
-## Installation
+## Commandes
+
+Le projet utilise [pnpm](https://pnpm.io) (version fixée dans `package.json`, activable avec `corepack enable`).
 
 ```bash
-npm install
+pnpm install     # installer les dépendances
+pnpm dev         # serveur de développement
+pnpm lint        # vérification du code
+pnpm test        # tests
+pnpm build       # build de production dans dist/
 ```
 
-## Développement
+## Formulaire de contact
 
-```bash
-npm run dev
-```
+La fonction `api/contact.ts` envoie les messages via [Resend](https://resend.com). Variables à définir dans Vercel (Settings → Environment Variables) :
 
-## Build production
+| Variable | Rôle |
+| --- | --- |
+| `RESEND_API_KEY` | Clé API Resend |
+| `CONTACT_EMAIL` | Adresse qui reçoit les messages |
+| `CONTACT_FROM` | Expéditeur sur un domaine vérifié dans Resend (facultatif) |
 
-```bash
-npm run build
-```
-
-## Prévisualisation du build
-
-```bash
-npm run preview
-```
-
-## Déploiement
-
-Le projet est compatible Vercel. La commande de build est `npm run build` et le dossier de sortie est `dist`.
-
-## Configuration du formulaire
-
-La fonction Vercel `/api/contact` utilise l'API Resend. Configurer :
-
-```bash
-RESEND_API_KEY=re_xxxxxxxxx
-CONTACT_EMAIL=contact@portfolio.fr.nf
-```
-
-## Notes
-
-- Le PHP, jQuery, Bootstrap local et les anciens fichiers SCSS/CSS ont été supprimés.
-- Le formulaire utilise une fonction Vercel et conserve le lien email comme solution de repli.
-- Le CV téléchargeable est fourni au format Markdown dans `public/cv-eleazar-nabet.md`.
-- Les compétences affichées sont limitées aux informations présentes dans le portfolio et dans les dépôts publics GitHub analysés.
+Sans domaine vérifié, Resend n'envoie qu'à l'adresse du compte Resend : `CONTACT_EMAIL` doit alors être cette adresse.
